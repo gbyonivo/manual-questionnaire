@@ -75,10 +75,7 @@ export function QuestionnaireContainer() {
   };
 
   return (
-    <div
-      className="gap-4 p-4 h-screen flex flex-col justify-center items-center relative"
-      style={{ backgroundColor: "#a3b89f" }}
-    >
+    <div className="gap-4 p-4 h-screen flex flex-col justify-center items-center relative">
       {fetchingQuestions && <div>Loading...</div>}
       {errorFetchingQuestions && (
         <div>Error: {errorFetchingQuestions.message}</div>

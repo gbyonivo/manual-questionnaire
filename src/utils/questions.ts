@@ -22,7 +22,7 @@ const convertOption = (option: unknown): Option | ImageOptions => {
     return {
       display: imageOption.display,
       value: imageOption.value,
-      isRejected: imageOption.isRejected,
+      isRejection: imageOption.isRejection,
       url: getValueFromHtmlString({
         htmlString: imageOption.display as string,
         key: "src",
@@ -40,7 +40,7 @@ const convertOption = (option: unknown): Option | ImageOptions => {
   return {
     display: (option as Option).display,
     value: (option as Option).value,
-    isRejected: (option as Option).isRejected,
+    isRejection: (option as Option).isRejection,
   };
 };
 
@@ -52,6 +52,15 @@ export const convertQuestions = (questionJSON: unknown): Question[] => {
         question: question.question,
         type: question.type,
         options: question.options.map(convertOption),
+        correctOptions: question.options.reduce(
+          (acc: string[], option: Option) => {
+            if (!option.isRejection) {
+              acc.push(option.value);
+            }
+            return acc;
+          },
+          []
+        ),
       };
     });
   }

@@ -5,7 +5,7 @@ export enum QuestionType {
 export interface Option {
   display: string | null;
   value: string;
-  isRejected: boolean;
+  isRejection: boolean;
 }
 
 export interface ImageOptions extends Option {
@@ -22,4 +22,5 @@ export interface Question {
   question: string;
   type: QuestionType;
   options: (Option | ImageOptions)[];
+  correctOptions: (string | boolean)[];
 }
