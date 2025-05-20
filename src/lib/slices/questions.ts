@@ -38,7 +38,7 @@ export const questionsSlice = createSlice({
         ...state,
         answers: {
           ...state.answers,
-          [action.payload.questionId]: action.payload.answer,
+          [action.payload.question]: action.payload.answer,
         },
       };
     },
