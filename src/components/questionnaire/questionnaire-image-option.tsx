@@ -7,7 +7,7 @@ interface QuestionnaireImageOptionProps {
   selected: boolean;
 }
 
-const imgClassName =
+const wrapperClassName =
   "hover:scale-105 transition-all duration-300 hover:cursor-pointer hover:border-1 hover:border-emerald-400 rounded-md";
 const selectedClassName = "border-black border-2";
 
@@ -19,7 +19,7 @@ export function QuestionnaireImageOption({
   // TODO: use SRCSET
   return (
     <div
-      className={`flex rounded-md justify-center ${
+      className={`flex rounded-md justify-center ${wrapperClassName} ${
         selected ? selectedClassName : ""
       }`}
     >
@@ -30,7 +30,6 @@ export function QuestionnaireImageOption({
         height={100}
         onClick={onClick}
         role="button"
-        className={imgClassName}
       />
     </div>
   );
