@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "./common/button";
 import { Body } from "./home/body";
 import { Footer } from "./home/footer";
+import { Logo } from "./common/logo";
 
 export function HomeContainer() {
   return (
@@ -19,6 +20,10 @@ export function HomeContainer() {
           className="w-full hidden lg:block"
           width={1000}
           height={750}
+        />
+        <Logo
+          size={40}
+          className="pl:32 mb-8 lg:mb-0 lg:absolute lg:top-4 lg:left-32"
         />
         <div className="w-full h-full lg:w-1/3 lg:absolute lg:top-0 lg:left-32">
           <div className="w-full h-full flex flex-col justify-center">
