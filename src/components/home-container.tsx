@@ -6,9 +6,11 @@ import { Body } from "./home/body";
 import { Footer } from "./home/footer";
 import { Logo } from "./common/logo";
 import { useQuestionnaire } from "@/hooks/use-questionnaire";
+import { useRouter } from "next/navigation";
 
 export function HomeContainer() {
   useQuestionnaire();
+  const router = useRouter();
   return (
     <div className="relative">
       {/* TODO: Background to be added to tailwind config */}
@@ -39,7 +41,9 @@ export function HomeContainer() {
             </div>
             <Button
               className="mt-8 bg-rose-900 text-white self-start"
-              onClick={() => {}}
+              onClick={() => {
+                router.push("/questionnaire");
+              }}
             >
               Take the quiz
             </Button>

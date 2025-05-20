@@ -6,7 +6,10 @@ interface ButtonProps {
 
 export function Button({ children, onClick, className }: ButtonProps) {
   return (
-    <button className={`px-4 py-2 ${className || ""}`} onClick={onClick}>
+    <button
+      className={`px-4 py-2 cursor-pointer ${className || ""}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

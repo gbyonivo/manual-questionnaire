@@ -15,6 +15,7 @@ const getValueFromHtmlString = ({
   return htmlString.split(`${key}="`)[1].split('"')[0];
 };
 
+// TODO: Add tests for this function
 const convertOption = (option: unknown): Option | ImageOptions => {
   if (isImageOptions(option as Option)) {
     const imageOption = option as ImageOptions;
@@ -43,6 +44,7 @@ const convertOption = (option: unknown): Option | ImageOptions => {
   };
 };
 
+// TODO: Add tests for this function
 export const convertQuestions = (questionJSON: unknown): Question[] => {
   if (Array.isArray(questionJSON)) {
     return questionJSON.map((question) => {
