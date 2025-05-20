@@ -1,5 +1,5 @@
 import { BodyData, isBodyContentWithLines } from "@/types/body-data";
-import bodyDesc from "@/utils/body-desc.json";
+import bodyDesc from "@/utils/json/body-desc.json";
 import { BodyLines } from "./body-lines";
 import { BodyImages } from "./body-images";
 

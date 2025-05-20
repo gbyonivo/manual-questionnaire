@@ -1,5 +1,5 @@
 import { Logo } from "../common/logo";
-import footerDesc from "@/utils/footer-desc.json";
+import footerDesc from "@/utils/json/footer-desc.json";
 import {
   FooterData,
   isFooterItemWithIcon,
@@ -8,6 +8,7 @@ import {
 // TODO: get icons from somewhere else
 import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
+// TODO: Solid icons instead of outlinedd
 const iconMap = {
   facebook: <Facebook size={24} className="text-pink-800" />,
   twitter: <Twitter size={24} className="text-pink-800" />,
@@ -17,6 +18,7 @@ const iconMap = {
 };
 
 // TODO: Add color to tailwind config
+// TODO: why is customer service breaking to next line
 export function Footer() {
   const footerData = footerDesc as unknown as FooterData;
   const footerKeys = Object.keys(footerData);

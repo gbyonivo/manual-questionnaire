@@ -5,8 +5,10 @@ import { Button } from "./common/button";
 import { Body } from "./home/body";
 import { Footer } from "./home/footer";
 import { Logo } from "./common/logo";
+import { useQuestionnaire } from "@/hooks/use-questionnaire";
 
 export function HomeContainer() {
+  useQuestionnaire();
   return (
     <div className="relative">
       {/* TODO: Background to be added to tailwind config */}
