@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useQuestionnaire } from "@/hooks/use-questionnaire";
+import { Logo } from "./common/logo";
 
 export function ResultContainer() {
   const { answers, questions } = useQuestionnaire();
@@ -18,7 +19,8 @@ export function ResultContainer() {
     });
 
   return (
-    <div className="gap-4 p-4 h-screen flex flex-col justify-center items-center relative">
+    <div className="gap-4 p-4 h-screen flex flex-col mt-32 items-center relative primary-text">
+      <Logo size={40} />
       <div className="text-center lg:max-w-2/3">
         {!hasAnsweredAllQuestions ? (
           <div>

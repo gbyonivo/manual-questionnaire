@@ -10,6 +10,7 @@ import { isImageOptions, Option } from "@/types/question";
 import { QuestionnaireTextOption } from "./questionnaire/questionnaire-text-option";
 import { useDispatch } from "react-redux";
 import { answerQuestion } from "@/lib/slices/questions";
+
 // TODO: Creating spinner using logo and translate
 
 const searchKey = "questionIndex";
@@ -73,9 +74,8 @@ export function QuestionnaireContainer() {
     );
     handleNextOrPreviousQuestion("next");
   };
-
   return (
-    <div className="gap-4 p-4 h-screen flex flex-col justify-center items-center relative">
+    <div className="gap-4 p-4 h-screen flex flex-col justify-center items-center relative primary-text">
       {fetchingQuestions && <div>Loading...</div>}
       {errorFetchingQuestions && (
         <div>Error: {errorFetchingQuestions.message}</div>
@@ -85,6 +85,7 @@ export function QuestionnaireContainer() {
           {questionIndex} / {questions.length}
         </div>
       )}
+
       {!!currentQuestion && (
         <div className="lg:max-w-2/3">
           <div className="text-2xl font-bold">{currentQuestion.question}</div>

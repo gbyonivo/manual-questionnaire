@@ -14,10 +14,7 @@ export function HomeContainer() {
   return (
     <div className="relative">
       {/* TODO: Background to be added to tailwind config */}
-      <div
-        className="w-full p-8 lg:p-0 relative"
-        style={{ backgroundColor: "#a3b89f" }}
-      >
+      <div className="w-full p-8 lg:p-0 relative primary-bg primary-text">
         <Image
           src="/images/home-bg.png"
           alt="Home"

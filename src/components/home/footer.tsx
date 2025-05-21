@@ -24,10 +24,7 @@ export function Footer() {
   const footerKeys = Object.keys(footerData);
 
   return (
-    <div
-      className="px-8 md:px-32 flex flex-row pt-16 mt-8"
-      style={{ backgroundColor: "#e8efe9" }}
-    >
+    <div className="px-8 md:px-32 flex flex-row pt-16 mt-8 secondary-bg primary-text">
       <Logo className="hidden md:block md:mr-40 lg:mr-80 self-start" />
       <div className="flex-1">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">

@@ -8,7 +8,7 @@ import { BodyImages } from "./body-images";
 export function Body() {
   const body = bodyDesc as unknown as BodyData;
   return (
-    <div className="pt-8">
+    <div className="pt-8 primary-text">
       <div className="pl-4 text-2xl md:text-4xl font-medium text-left md:text-center">
         {body.header}
       </div>

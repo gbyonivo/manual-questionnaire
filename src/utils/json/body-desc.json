@@ -44,6 +44,28 @@
           ]
         }
       ]
+    },
+    {
+      "id": "erectile-dysfunction-2",
+      "content": [
+        {
+          "id": "erectile-dysfunction-lines-2",
+          "lines": [
+            "Erecetile dysfunction",
+            "Erections can be a tricky thing. But no need to feel down!",
+            "We're working around the clock to bring you a holistic approach to your wellness. From top to bottom, inside and out."
+          ]
+        },
+        {
+          "id": "erectile-dysfunction-images9",
+          "images": [
+            {
+              "src": "/images/ed.png",
+              "alt": "Erectile dysfunction"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

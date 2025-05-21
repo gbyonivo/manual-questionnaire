@@ -21,7 +21,7 @@ export function QuestionnaireTextOption({
   return (
     <div
       className={`flex space-x-4 p-2 ${textOptionClassName} ${className} ${
-        selected ? "border-black border-2" : ""
+        selected ? "primary-border border-2" : ""
       }`}
       role="button"
       onClick={onClick}

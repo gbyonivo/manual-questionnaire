@@ -9,7 +9,7 @@ interface QuestionnaireImageOptionProps {
 
 const wrapperClassName =
   "hover:scale-105 transition-all duration-300 hover:cursor-pointer hover:border-1 hover:border-emerald-400 rounded-md";
-const selectedClassName = "border-black border-2";
+const selectedClassName = "primary-border border-2";
 
 export function QuestionnaireImageOption({
   option,
