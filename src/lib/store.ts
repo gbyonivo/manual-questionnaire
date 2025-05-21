@@ -11,8 +11,14 @@ const rootPersistConfig = {
   blacklist: ["questions"],
 };
 
+const questionsPersistConfig = {
+  key: "questions",
+  storage,
+  whitelist: ["answers"],
+};
+
 const rootReducer = combineReducers({
-  questions: questionsReducer,
+  questions: persistReducer(questionsPersistConfig, questionsReducer),
 });
 
 const persistedReducer = persistReducer(rootPersistConfig, rootReducer);
