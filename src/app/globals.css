@@ -25,6 +25,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* TODO: Remove these classes and add to tailwind.config.ts */
 .primary-bg {
   background-color: #a3b89f;
 }

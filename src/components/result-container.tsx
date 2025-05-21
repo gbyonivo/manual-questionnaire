@@ -7,9 +7,11 @@ import { Logo } from "./common/logo";
 export function ResultContainer() {
   const { answers, questions } = useQuestionnaire();
 
+  // TODO: Write tests for this
   const hasAnsweredAllQuestions =
     Object.keys(answers).length === questions.length;
 
+  // TODO: Write tests for this
   const hasAllQuestionsCorrectly =
     hasAnsweredAllQuestions &&
     questions.every((question) => {
