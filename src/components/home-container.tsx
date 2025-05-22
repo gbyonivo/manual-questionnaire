@@ -42,7 +42,7 @@ export function HomeContainer() {
                 router.push("/questionnaire");
               }}
             >
-              Take the quiz
+              TAKE THE QUIZ
             </Button>
           </div>
         </div>
