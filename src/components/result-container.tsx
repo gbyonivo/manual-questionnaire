@@ -16,14 +16,13 @@ export function ResultContainer() {
     hasAnsweredAllQuestions &&
     questions.every((question) => {
       const answer = answers[question.question];
-      console.log(answer, question.correctOptions);
       return question.correctOptions.includes(answer);
     });
 
   return (
     <div className="gap-4 p-4 h-screen flex flex-col mt-32 items-center relative primary-text">
       <Logo size={40} />
-      <div className="text-center lg:max-w-2/3">
+      <div className="text-center lg:max-w-2/3" data-testid="result-container">
         {!hasAnsweredAllQuestions ? (
           <div>
             Please{" "}

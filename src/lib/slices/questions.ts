@@ -1,5 +1,7 @@
+import { Question } from "@/types/question";
 import { QuestionsState } from "@/types/states/question-state";
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { AxiosError } from "axios";
 
 const initialState: QuestionsState = {
   questions: [],
@@ -19,21 +21,27 @@ export const questionsSlice = createSlice({
         errorFetchingQuestions: null,
       };
     },
-    fetchQuestionsSuccess: (state, action) => {
+    fetchQuestionsSuccess: (state, action: PayloadAction<Question[]>) => {
       return {
         ...state,
         questions: action.payload,
         fetchingQuestions: false,
       };
     },
-    fetchQuestionsFailure: (state, action) => {
+    fetchQuestionsFailure: (
+      state,
+      action: PayloadAction<Error | AxiosError>
+    ) => {
       return {
         ...state,
         fetchingQuestions: false,
         errorFetchingQuestions: action.payload,
       };
     },
-    answerQuestion: (state, action) => {
+    answerQuestion: (
+      state,
+      action: PayloadAction<{ question: string; answer: string }>
+    ) => {
       return {
         ...state,
         answers: {

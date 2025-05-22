@@ -18,7 +18,6 @@ export const getValueFromHtmlString = ({
 export const convertOption = (
   option: unknown
 ): Option | ImageOptions | null => {
-  console.log(option);
   if (
     !option ||
     !(option as Option).display ||
@@ -28,7 +27,6 @@ export const convertOption = (
     return null;
   }
   if (isImageOptions(option as Option)) {
-    console.log("isImageOptions");
     const imageOption = option as ImageOptions;
     return {
       display: imageOption.display,

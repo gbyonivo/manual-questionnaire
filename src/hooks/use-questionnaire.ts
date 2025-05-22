@@ -15,7 +15,7 @@ export const useQuestionnaire = (): {
   questions: Question[];
   answers: Record<string, string>;
   fetchingQuestions: boolean;
-  errorFetchingQuestions: AxiosError | null;
+  errorFetchingQuestions: AxiosError | Error | null;
   refetch: () => void;
 } => {
   const dispatch = useDispatch();
