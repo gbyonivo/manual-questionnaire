@@ -17,6 +17,7 @@ A web application built with Next.js for managing and conducting questionnaires.
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
 - **HTTP Client**: Axios
+- **Tests**: Jest
 
 ## Getting Started
 
