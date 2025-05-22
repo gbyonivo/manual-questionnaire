@@ -1,0 +1,71 @@
+{
+  "product": [
+    {
+      "name": "Popular",
+      "link": "/popular"
+    },
+    {
+      "name": "Trending",
+      "link": "/trending"
+    },
+    {
+      "name": "Guide",
+      "link": "/guide"
+    },
+    {
+      "name": "Products",
+      "link": "/products"
+    }
+  ],
+  "company": [
+    {
+      "name": "Press",
+      "link": "/press"
+    },
+    {
+      "name": "Mission",
+      "link": "/mission"
+    },
+    {
+      "name": "Strategy",
+      "link": "/strategy"
+    },
+    {
+      "name": "Contact",
+      "link": "/contact"
+    }
+  ],
+  "info": [
+    {
+      "name": "Support",
+      "link": "/support"
+    },
+    {
+      "name": "Customer Service",
+      "link": "/customer-service"
+    },
+    {
+      "name": "Get Started",
+      "link": "/get-started"
+    }
+  ],
+  "follow_us": [
+    {
+      "name": "Facebook",
+      "icons": [
+        {
+          "icon": "facebook",
+          "link": "https://www.facebook.com"
+        },
+        {
+          "icon": "twitter",
+          "link": "https://www.twitter.com"
+        },
+        {
+          "icon": "instagram",
+          "link": "https://www.instagram.com"
+        }
+      ]
+    }
+  ]
+}
