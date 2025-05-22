@@ -31,7 +31,7 @@ A web application built with Next.js for managing and conducting questionnaires.
 1. Clone the repository:
 
 ```bash
-git clone [your-repository-url]
+git clone git@github.com:gbyonivo/manual-questionnaire.git
 cd manual-questionnaire
 ```
 
