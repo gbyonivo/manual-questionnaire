@@ -31,13 +31,20 @@ export function QuestionnaireContainer() {
   const [questionIndex, setQuestionIndex] = useState<number>((): number => {
     return getQuestionIndex(searchParams);
   });
-
-  useEffect(() => {
-    setQuestionIndex(getQuestionIndex(searchParams));
-  }, [searchParams]);
-
   const { questions, fetchingQuestions, errorFetchingQuestions, answers } =
     useQuestionnaire();
+
+  useEffect(() => {
+    const questionIndex = getQuestionIndex(searchParams);
+    if (
+      questionIndex > questions.length ||
+      questionIndex < 1 ||
+      !Number.isInteger(questionIndex)
+    ) {
+      router.push("/questionnaire?questionIndex=1");
+    }
+    setQuestionIndex(getQuestionIndex(searchParams));
+  }, [questions?.length, router, searchParams]);
 
   const handleNextOrPreviousQuestion = (direction: "next" | "previous") => {
     if (questionIndex === questions.length && direction === "next") {
