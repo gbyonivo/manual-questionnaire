@@ -38,7 +38,7 @@ cd manual-questionnaire
 2. Install dependencies:
 
 ```bash
-yarn install
+yarn
 ```
 
 3. Run the development server:
